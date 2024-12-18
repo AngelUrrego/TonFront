@@ -1,42 +1,97 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+:root {
+  --primary-color: #2EAADE; /* Naranja cálido para resaltar botones y enlaces */
+  --background-color: #242424; /* Fondo oscuro y suave para la página */
+  --text-color: #f5f5f5; /* Texto principal en blanco suave */
+  --secondary-text-color: #b0b0b0; /* Texto secundario o menos importante */
+  --button-color: #2EAADE; /* Un color naranja suave para los botones */
+  --button-hover-color: #2EAADE; /* Color al pasar el mouse sobre botones (naranja más brillante) */
+  --link-color: #2EAADE; /* Enlaces con el mismo color que los botones */
+  font-family: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+h1, h2, h3 {
+  color: var(--primary-color); 
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+div {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 20px;
+  text-align: center; 
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: var(--button-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 0 auto; 
+}
+
+button:hover {
+  background-color: var(--button-hover-color);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background-color: #1e1e1e; 
+  border-radius: 8px;
+  margin-bottom: 15px;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+p {
+  margin: 5px 0;
+  color: var(--secondary-text-color);
+}
+
+strong {
+  color: var(--text-color);
+}
+
+a {
+  color: var(--link-color); /* Enlaces con el color primario (naranja) */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.qr-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.qr-container p {
+  color: var(--secondary-text-color);
+}
+
+@media (max-width: 600px) {
+  div {
+    padding: 10px;
   }
-  to {
-    transform: rotate(360deg);
+
+  button {
+    width: 100%;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
