@@ -19,7 +19,7 @@ body {
 }
 
 h1, h2, h3 {
-  color: var(--primary-color); 
+  color: var(--primary-color); /* Naranja para los encabezados */
   text-align: center;
 }
 
