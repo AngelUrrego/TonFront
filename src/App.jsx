@@ -6,7 +6,7 @@ import './App.css';
 
 const App = () => {
     return (
-        <Router>
+        <Router basename="/TonFront/">
             <Routes>
                 <Route path="/" element={<TONTracker />} />
                 <Route path="/transactions/:user" element={<UserTransactions />} />
